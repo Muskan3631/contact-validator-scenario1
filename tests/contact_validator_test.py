@@ -31,14 +31,21 @@ def test_is_valid_phone_true():
     # Assert
     assert result == True
 
+def test_normalize_phone():
+    """Test converting a dashed phone number to digits only."""
+    phone = "555-123-4567"
 
-# def test_mask_email_basic():
-#     """Test masking a typical email address."""
-#     # Arrange
-#     email = "priya@example.com"
+    result = normalize_phone(phone)
 
-#     # Act
-#     result = mask_email(email)
+    assert result == "5551234567"
 
-#     # Assert
-#     assert result == "pr***@example.com"
+def test_mask_email_basic():
+    """Test masking a typical email address."""
+    # Arrange
+    email = "priya@example.com"
+
+    # Act
+    result = mask_email(email)
+
+    # Assert
+    assert result == "pr***@example.com"
