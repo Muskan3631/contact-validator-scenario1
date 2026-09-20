@@ -36,9 +36,9 @@ def test_is_valid_phone_true():
 #     """Test masking a typical email address."""
 #     # Arrange
 #     email = "priya@example.com"
-#
+
 #     # Act
 #     result = mask_email(email)
-#
+
 #     # Assert
 #     assert result == "pr***@example.com"
